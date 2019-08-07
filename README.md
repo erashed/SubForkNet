@@ -23,6 +23,9 @@ Output: Trained Network + loss function (training/validation) values
 How to use
 
 Open in Mathematica (12.0 or above), Evalute -> Evaluate Notebook
+
+-> If you are not familier with Mathematica Notebooks (*.nb), you can download free reader from here: http://www.wolfram.com/cdf-player/
+
 -----------------------------------------------------
 Reference
 
