@@ -1,0 +1,770 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     29395,        762]
+NotebookOptionsPosition[     20482,        627]
+NotebookOutlinePosition[     20818,        642]
+CellTagsIndexPosition[     20775,        639]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+  "NotebookEvaluate", "[", 
+   "\"\</home/essam/Thalamus2/Notebooks/parameters.nb\>\"", "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{3.772234731374744*^9},
+ CellLabel->"In[25]:=",ExpressionUUID->"623841c5-af16-4816-9351-3197182e9c16"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"SubForkNet ver.  4.0 (FreeModel)\"\>"], "Print",
+ CellChangeTimes->{3.7731216276508703`*^9},
+ CellLabel->
+  "During evaluation of \
+In[18]:=",ExpressionUUID->"63fef950-38d8-41c5-aac9-7c62ae3b9441"],
+
+Cell[BoxData["\<\"Direction: [C] Epoches: [100] Batch Size: [4]\"\>"], "Print",
+ CellChangeTimes->{3.773121627675234*^9},
+ CellLabel->
+  "During evaluation of \
+In[19]:=",ExpressionUUID->"5588b662-e62c-4ab3-88a9-3890c0171f2b"],
+
+Cell[BoxData["\<\"Network Architecture: arch0C\"\>"], "Print",
+ CellChangeTimes->{3.773121627697575*^9},
+ CellLabel->
+  "During evaluation of \
+In[20]:=",ExpressionUUID->"f89f0290-554d-4b7d-bd4d-2d6ea12ed5e2"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"CreateDirectory", "[", "ResultFolder", "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.771817466613448*^9, 3.771817486518811*^9}},
+ CellLabel->"In[26]:=",ExpressionUUID->"a7a98336-e4e7-4cb3-95ef-3e552bd70ace"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"TN", "=", 
+   RowBox[{"Import", "[", "NetworkName", "]"}]}], ";"}]], "Input",
+ CellLabel->"In[27]:=",ExpressionUUID->"41bc45c1-902b-40e0-8f05-1669c89dabcd"],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"--", 
+   RowBox[{"--", 
+    RowBox[{"--", "--"}]}]}], "*)"}]], "Input",
+ CellChangeTimes->{{3.771710978257256*^9, 3.7717109808940487`*^9}},
+ CellLabel->"In[28]:=",ExpressionUUID->"83542c83-4b88-4d4c-aa18-1bde3a8f0fa0"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"TestPt", "=", "17"}], ";", 
+  RowBox[{"NotebookEvaluate", "[", "TestName", "]"}], ";"}]], "Input",
+ CellChangeTimes->{
+  3.761533270456314*^9, 3.771637755645286*^9, {3.771637911823083*^9, 
+   3.771637916573495*^9}, {3.771639743256033*^9, 3.771639753957959*^9}, {
+   3.772238292884255*^9, 3.772238293449121*^9}},
+ CellLabel->"In[29]:=",ExpressionUUID->"2187b9a0-275e-4ae2-9a47-5a7b464ac79b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"Subject: 17\"\>"], "Print",
+ CellChangeTimes->{3.773121631827838*^9},
+ CellLabel->
+  "During evaluation of \
+In[7]:=",ExpressionUUID->"d441ccb3-9309-47f7-b83c-0cbdd783f00b"],
+
+Cell[BoxData["\<\"[1/7] Thalamus \"\>"], "Print",
+ CellChangeTimes->{3.773121631849874*^9},
+ CellLabel->
+  "During evaluation of \
+In[8]:=",ExpressionUUID->"5e41d2cd-36e7-4c1b-a009-efcc46b1123f"],
+
+Cell[BoxData["\<\"[2/7] Caudate \"\>"], "Print",
+ CellChangeTimes->{3.773121766670545*^9},
+ CellLabel->
+  "During evaluation of \
+In[11]:=",ExpressionUUID->"df0222ea-daa1-48ca-a845-4c82930d974f"],
+
+Cell[BoxData["\<\"[3/7] Putamen \"\>"], "Print",
+ CellChangeTimes->{3.773121884933035*^9},
+ CellLabel->
+  "During evaluation of \
+In[14]:=",ExpressionUUID->"52c5ff7b-18e8-447b-ba90-5cb825ddeace"],
+
+Cell[BoxData["\<\"[4/7] Pallidum \"\>"], "Print",
+ CellChangeTimes->{3.773122003155698*^9},
+ CellLabel->
+  "During evaluation of \
+In[17]:=",ExpressionUUID->"42d32da8-5c25-4f34-a9d1-e0e1fed5fc77"],
+
+Cell[BoxData["\<\"[5/7] Hippocampus \"\>"], "Print",
+ CellChangeTimes->{3.7731221216885357`*^9},
+ CellLabel->
+  "During evaluation of \
+In[20]:=",ExpressionUUID->"fa23cae9-c045-4431-8fd4-babdc3a00847"],
+
+Cell[BoxData["\<\"[6/7] Amygdala \"\>"], "Print",
+ CellChangeTimes->{3.7731222387575493`*^9},
+ CellLabel->
+  "During evaluation of \
+In[23]:=",ExpressionUUID->"0af9d606-3422-45ec-9792-be26b9efa2fc"],
+
+Cell[BoxData["\<\"[7/7] Accumbens \"\>"], "Print",
+ CellChangeTimes->{3.773122357168868*^9},
+ CellLabel->
+  "During evaluation of \
+In[26]:=",ExpressionUUID->"b4e16cc3-256a-405a-9de5-ce278c87fef7"],
+
+Cell[BoxData["\<\"[Done] \"\>"], "Print",
+ CellChangeTimes->{3.77312247536764*^9},
+ CellLabel->
+  "During evaluation of \
+In[29]:=",ExpressionUUID->"be2c086f-647e-4d43-b58f-0de510d454cc"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"TestPt", "=", "19"}], ";", 
+  RowBox[{"NotebookEvaluate", "[", "TestName", "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.761533275284659*^9, 3.761533275972684*^9}, 
+   3.7716377560916777`*^9, 3.771637798156691*^9, {3.7716397432576303`*^9, 
+   3.7716397539599247`*^9}, {3.772238299172432*^9, 3.7722382997476273`*^9}},
+ CellLabel->"In[30]:=",ExpressionUUID->"58ab8cb7-baca-4cf4-869c-ad51e32783dc"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"Subject: 19\"\>"], "Print",
+ CellChangeTimes->{3.773122479385964*^9},
+ CellLabel->
+  "During evaluation of \
+In[7]:=",ExpressionUUID->"cdaa98f6-6ba8-4559-8b29-077c607207e8"],
+
+Cell[BoxData["\<\"[1/7] Thalamus \"\>"], "Print",
+ CellChangeTimes->{3.7731224794003696`*^9},
+ CellLabel->
+  "During evaluation of \
+In[8]:=",ExpressionUUID->"39e0bf15-a455-4ac7-8ac7-43722f8b6a3b"],
+
+Cell[BoxData["\<\"[2/7] Caudate \"\>"], "Print",
+ CellChangeTimes->{3.773122597562538*^9},
+ CellLabel->
+  "During evaluation of \
+In[11]:=",ExpressionUUID->"581ba305-d1d4-433d-b65e-1af16725aa90"],
+
+Cell[BoxData["\<\"[3/7] Putamen \"\>"], "Print",
+ CellChangeTimes->{3.773122715400241*^9},
+ CellLabel->
+  "During evaluation of \
+In[14]:=",ExpressionUUID->"e4cf19e0-5865-4208-b38f-44b4c8419669"],
+
+Cell[BoxData["\<\"[4/7] Pallidum \"\>"], "Print",
+ CellChangeTimes->{3.773122832079896*^9},
+ CellLabel->
+  "During evaluation of \
+In[17]:=",ExpressionUUID->"f30d6ccf-e641-4f6e-9233-254dc3fb837e"],
+
+Cell[BoxData["\<\"[5/7] Hippocampus \"\>"], "Print",
+ CellChangeTimes->{3.773122949186108*^9},
+ CellLabel->
+  "During evaluation of \
+In[20]:=",ExpressionUUID->"b22c6576-e9f0-4d35-b09d-4fde65c8dcb2"],
+
+Cell[BoxData["\<\"[6/7] Amygdala \"\>"], "Print",
+ CellChangeTimes->{3.773123068023821*^9},
+ CellLabel->
+  "During evaluation of \
+In[23]:=",ExpressionUUID->"a9fe748e-e93c-4398-b025-66ba7d400b93"],
+
+Cell[BoxData["\<\"[7/7] Accumbens \"\>"], "Print",
+ CellChangeTimes->{3.773123185197343*^9},
+ CellLabel->
+  "During evaluation of \
+In[26]:=",ExpressionUUID->"6cf0f677-23fa-48eb-b84f-b9dd1b42e352"],
+
+Cell[BoxData["\<\"[Done] \"\>"], "Print",
+ CellChangeTimes->{3.773123303710004*^9},
+ CellLabel->
+  "During evaluation of \
+In[29]:=",ExpressionUUID->"bf29a30c-f564-46e5-9b23-e43317cd27e8"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"TestPt", "=", "25"}], ";", 
+  RowBox[{"NotebookEvaluate", "[", "TestName", "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.7615332109321213`*^9, 3.761533248452376*^9}, 
+   3.761533282539453*^9, 3.771637756467585*^9, 3.7716377985832663`*^9, {
+   3.77163974325919*^9, 3.771639753966564*^9}, 3.772238307844308*^9},
+ CellLabel->"In[31]:=",ExpressionUUID->"263b1c67-9172-4ca9-a719-a33ae3a9cd4b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"Subject: 25\"\>"], "Print",
+ CellChangeTimes->{3.773123307739688*^9},
+ CellLabel->
+  "During evaluation of \
+In[7]:=",ExpressionUUID->"37c105bf-ba4f-48b0-8ad3-d8eefea06294"],
+
+Cell[BoxData["\<\"[1/7] Thalamus \"\>"], "Print",
+ CellChangeTimes->{3.773123307756982*^9},
+ CellLabel->
+  "During evaluation of \
+In[8]:=",ExpressionUUID->"621a81e0-99ab-4d6e-8159-2b3282a88941"],
+
+Cell[BoxData["\<\"[2/7] Caudate \"\>"], "Print",
+ CellChangeTimes->{3.773123425184578*^9},
+ CellLabel->
+  "During evaluation of \
+In[11]:=",ExpressionUUID->"14882d2d-04e5-48f2-88bc-cc85f4aa02f1"],
+
+Cell[BoxData["\<\"[3/7] Putamen \"\>"], "Print",
+ CellChangeTimes->{3.773123542605901*^9},
+ CellLabel->
+  "During evaluation of \
+In[14]:=",ExpressionUUID->"1add1492-d099-4982-a118-e410e016ae51"],
+
+Cell[BoxData["\<\"[4/7] Pallidum \"\>"], "Print",
+ CellChangeTimes->{3.773123659836125*^9},
+ CellLabel->
+  "During evaluation of \
+In[17]:=",ExpressionUUID->"659c82ac-6fb8-4e47-a64a-9f6f0b149c2f"],
+
+Cell[BoxData["\<\"[5/7] Hippocampus \"\>"], "Print",
+ CellChangeTimes->{3.773123777342951*^9},
+ CellLabel->
+  "During evaluation of \
+In[20]:=",ExpressionUUID->"59ae3756-3b4e-490e-9b9c-e1ceeb80d919"],
+
+Cell[BoxData["\<\"[6/7] Amygdala \"\>"], "Print",
+ CellChangeTimes->{3.773123895088265*^9},
+ CellLabel->
+  "During evaluation of \
+In[23]:=",ExpressionUUID->"5fa5df34-3fb4-4089-9c12-035ef0417c44"],
+
+Cell[BoxData["\<\"[7/7] Accumbens \"\>"], "Print",
+ CellChangeTimes->{3.7731240129664917`*^9},
+ CellLabel->
+  "During evaluation of \
+In[26]:=",ExpressionUUID->"fc43c2fd-e354-457c-b5d7-9248db15a493"],
+
+Cell[BoxData["\<\"[Done] \"\>"], "Print",
+ CellChangeTimes->{3.773124130870419*^9},
+ CellLabel->
+  "During evaluation of \
+In[29]:=",ExpressionUUID->"8a064448-61cc-4777-a55b-3c27616e65f6"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"TestPt", "=", "28"}], ";", 
+  RowBox[{"NotebookEvaluate", "[", "TestName", "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.7615332975425797`*^9, 3.761533298116939*^9}, 
+   3.7716377568550367`*^9, 3.771637799044992*^9, {3.771639743262547*^9, 
+   3.7716397539688396`*^9}, 3.772238313921171*^9},
+ CellLabel->"In[32]:=",ExpressionUUID->"198c9e8e-17da-4786-83f6-90cbe8f9eda0"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"Subject: 28\"\>"], "Print",
+ CellChangeTimes->{3.773124134851327*^9},
+ CellLabel->
+  "During evaluation of \
+In[7]:=",ExpressionUUID->"252fca1f-f767-4c91-b2fc-8026f6c72d63"],
+
+Cell[BoxData["\<\"[1/7] Thalamus \"\>"], "Print",
+ CellChangeTimes->{3.773124134865962*^9},
+ CellLabel->
+  "During evaluation of \
+In[8]:=",ExpressionUUID->"03b87a55-9f26-4753-bb07-3ee24df222e1"],
+
+Cell[BoxData["\<\"[2/7] Caudate \"\>"], "Print",
+ CellChangeTimes->{3.77312425311789*^9},
+ CellLabel->
+  "During evaluation of \
+In[11]:=",ExpressionUUID->"d9d94436-ee9c-448e-a020-61a824965149"],
+
+Cell[BoxData["\<\"[3/7] Putamen \"\>"], "Print",
+ CellChangeTimes->{3.773124370324253*^9},
+ CellLabel->
+  "During evaluation of \
+In[14]:=",ExpressionUUID->"e0fa9b43-7ea1-4de4-9229-d2d820c64cbe"],
+
+Cell[BoxData["\<\"[4/7] Pallidum \"\>"], "Print",
+ CellChangeTimes->{3.773124487952289*^9},
+ CellLabel->
+  "During evaluation of \
+In[17]:=",ExpressionUUID->"bb4b4101-3ff4-4c37-a1e5-b0a059ace7b8"],
+
+Cell[BoxData["\<\"[5/7] Hippocampus \"\>"], "Print",
+ CellChangeTimes->{3.773124605735611*^9},
+ CellLabel->
+  "During evaluation of \
+In[20]:=",ExpressionUUID->"193bfdfa-247b-4bd7-8f25-c90d5166d901"],
+
+Cell[BoxData["\<\"[6/7] Amygdala \"\>"], "Print",
+ CellChangeTimes->{3.773124722701737*^9},
+ CellLabel->
+  "During evaluation of \
+In[23]:=",ExpressionUUID->"a966d1af-51f6-4773-b9b6-9690050ad8ef"],
+
+Cell[BoxData["\<\"[7/7] Accumbens \"\>"], "Print",
+ CellChangeTimes->{3.7731248405793056`*^9},
+ CellLabel->
+  "During evaluation of \
+In[26]:=",ExpressionUUID->"6f9d17de-564e-47f4-90b6-0a636bf530b2"],
+
+Cell[BoxData["\<\"[Done] \"\>"], "Print",
+ CellChangeTimes->{3.773124958638002*^9},
+ CellLabel->
+  "During evaluation of \
+In[29]:=",ExpressionUUID->"ecde4e66-e3ef-4d85-b735-aad9e15e8d8f"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"TestPt", "=", "34"}], ";", 
+  RowBox[{"NotebookEvaluate", "[", "TestName", "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.76153325728546*^9, 3.761533258809053*^9}, {
+   3.761533316117166*^9, 3.761533317014236*^9}, 3.771637757237886*^9, 
+   3.771637799491762*^9, {3.771639743265843*^9, 3.771639753971616*^9}, 
+   3.772238323294816*^9},
+ CellLabel->"In[33]:=",ExpressionUUID->"e76ce33d-6827-450c-b7ed-d6130f29789a"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"Subject: 34\"\>"], "Print",
+ CellChangeTimes->{3.773124962670508*^9},
+ CellLabel->
+  "During evaluation of \
+In[7]:=",ExpressionUUID->"97441fae-0f56-4d8d-b802-de9ea21baa88"],
+
+Cell[BoxData["\<\"[1/7] Thalamus \"\>"], "Print",
+ CellChangeTimes->{3.7731249626939087`*^9},
+ CellLabel->
+  "During evaluation of \
+In[8]:=",ExpressionUUID->"d5c00b1e-c041-440b-bbd3-5c23cd85e177"],
+
+Cell[BoxData["\<\"[2/7] Caudate \"\>"], "Print",
+ CellChangeTimes->{3.7731250810157413`*^9},
+ CellLabel->
+  "During evaluation of \
+In[11]:=",ExpressionUUID->"9fbd5ba5-9d3e-47bd-816c-6afa7b0bc107"],
+
+Cell[BoxData["\<\"[3/7] Putamen \"\>"], "Print",
+ CellChangeTimes->{3.773125198727971*^9},
+ CellLabel->
+  "During evaluation of \
+In[14]:=",ExpressionUUID->"c9f6ef33-37a8-437d-baa8-ab3ffbd96ce2"],
+
+Cell[BoxData["\<\"[4/7] Pallidum \"\>"], "Print",
+ CellChangeTimes->{3.773125316012879*^9},
+ CellLabel->
+  "During evaluation of \
+In[17]:=",ExpressionUUID->"a3f87681-d05d-48c0-b600-ed5ef65af946"],
+
+Cell[BoxData["\<\"[5/7] Hippocampus \"\>"], "Print",
+ CellChangeTimes->{3.773125433766644*^9},
+ CellLabel->
+  "During evaluation of \
+In[20]:=",ExpressionUUID->"a3a04f8f-e661-4151-97da-3aa1dab14970"],
+
+Cell[BoxData["\<\"[6/7] Amygdala \"\>"], "Print",
+ CellChangeTimes->{3.773125550975924*^9},
+ CellLabel->
+  "During evaluation of \
+In[23]:=",ExpressionUUID->"361ca106-83bf-49ff-b4a0-e8192f1d8c19"],
+
+Cell[BoxData["\<\"[7/7] Accumbens \"\>"], "Print",
+ CellChangeTimes->{3.7731256695212507`*^9},
+ CellLabel->
+  "During evaluation of \
+In[26]:=",ExpressionUUID->"fef7c9f4-ec94-4a02-8dca-b506b4c1d7be"],
+
+Cell[BoxData["\<\"[Done] \"\>"], "Print",
+ CellChangeTimes->{3.773125786359611*^9},
+ CellLabel->
+  "During evaluation of \
+In[29]:=",ExpressionUUID->"2a80d7bc-b311-4c29-99ce-47d2c1afc5b9"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"TestPt", "=", "39"}], ";", 
+  RowBox[{"NotebookEvaluate", "[", "TestName", "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.761533327499693*^9, 3.761533328135125*^9}, 
+   3.771637757597611*^9, 3.771637799959112*^9, {3.771639743268508*^9, 
+   3.771639753974415*^9}, {3.772238330212749*^9, 3.772238330677527*^9}},
+ CellLabel->"In[34]:=",ExpressionUUID->"39da21f2-376c-4f20-baab-4d4d4cd2a625"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"Subject: 39\"\>"], "Print",
+ CellChangeTimes->{3.773125790351486*^9},
+ CellLabel->
+  "During evaluation of \
+In[7]:=",ExpressionUUID->"7727c42e-c470-4eee-a14a-aee0890dfb44"],
+
+Cell[BoxData["\<\"[1/7] Thalamus \"\>"], "Print",
+ CellChangeTimes->{3.77312579037053*^9},
+ CellLabel->
+  "During evaluation of \
+In[8]:=",ExpressionUUID->"9d53b874-6d67-4c43-be37-d8e83a0c436b"],
+
+Cell[BoxData["\<\"[2/7] Caudate \"\>"], "Print",
+ CellChangeTimes->{3.773125908718422*^9},
+ CellLabel->
+  "During evaluation of \
+In[11]:=",ExpressionUUID->"a36749d3-7f71-4b02-8192-bfbc9fa8085b"],
+
+Cell[BoxData["\<\"[3/7] Putamen \"\>"], "Print",
+ CellChangeTimes->{3.773126025411498*^9},
+ CellLabel->
+  "During evaluation of \
+In[14]:=",ExpressionUUID->"67526f3f-1b7b-4199-abe9-f18577a610b2"],
+
+Cell[BoxData["\<\"[4/7] Pallidum \"\>"], "Print",
+ CellChangeTimes->{3.7731261435215073`*^9},
+ CellLabel->
+  "During evaluation of \
+In[17]:=",ExpressionUUID->"c30ac194-29d2-4594-8043-da34691db2c6"],
+
+Cell[BoxData["\<\"[5/7] Hippocampus \"\>"], "Print",
+ CellChangeTimes->{3.773126260625864*^9},
+ CellLabel->
+  "During evaluation of \
+In[20]:=",ExpressionUUID->"9b540c0c-d1fc-4cc6-8d89-40fef3b7b293"],
+
+Cell[BoxData["\<\"[6/7] Amygdala \"\>"], "Print",
+ CellChangeTimes->{3.773126378091474*^9},
+ CellLabel->
+  "During evaluation of \
+In[23]:=",ExpressionUUID->"67ce40fe-8911-43f6-957c-4d8c0941fe61"],
+
+Cell[BoxData["\<\"[7/7] Accumbens \"\>"], "Print",
+ CellChangeTimes->{3.773126496758316*^9},
+ CellLabel->
+  "During evaluation of \
+In[26]:=",ExpressionUUID->"bfb5e585-48e3-44f1-bab4-efcd72cc9546"],
+
+Cell[BoxData["\<\"[Done] \"\>"], "Print",
+ CellChangeTimes->{3.7731266142522707`*^9},
+ CellLabel->
+  "During evaluation of \
+In[29]:=",ExpressionUUID->"771930c7-a3e2-41fe-a2c0-61ee20766b4e"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"TestPt", "=", "42"}], ";", 
+  RowBox[{"NotebookEvaluate", "[", "TestName", "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.761533338633607*^9, 3.761533339447934*^9}, 
+   3.771637757983521*^9, 3.771637800531645*^9, {3.771639743270091*^9, 
+   3.771639753977207*^9}, {3.772238339524186*^9, 3.772238339896215*^9}},
+ CellLabel->"In[35]:=",ExpressionUUID->"61a51077-80ce-4944-ab38-6e2db70b9db1"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"Subject: 42\"\>"], "Print",
+ CellChangeTimes->{3.773126618256885*^9},
+ CellLabel->
+  "During evaluation of \
+In[7]:=",ExpressionUUID->"0d18f21d-9566-401f-b8b7-c3f80648a3dc"],
+
+Cell[BoxData["\<\"[1/7] Thalamus \"\>"], "Print",
+ CellChangeTimes->{3.7731266182705793`*^9},
+ CellLabel->
+  "During evaluation of \
+In[8]:=",ExpressionUUID->"50e04b93-ea01-459f-bf0c-34dce669aea3"],
+
+Cell[BoxData["\<\"[2/7] Caudate \"\>"], "Print",
+ CellChangeTimes->{3.77312673572361*^9},
+ CellLabel->
+  "During evaluation of \
+In[11]:=",ExpressionUUID->"b29f1e82-ef2f-4ad9-a340-8aba43a2e5e3"],
+
+Cell[BoxData["\<\"[3/7] Putamen \"\>"], "Print",
+ CellChangeTimes->{3.7731268531293507`*^9},
+ CellLabel->
+  "During evaluation of \
+In[14]:=",ExpressionUUID->"c4b1f627-bf02-49fe-8da0-e49d6e7af297"],
+
+Cell[BoxData["\<\"[4/7] Pallidum \"\>"], "Print",
+ CellChangeTimes->{3.773126970943982*^9},
+ CellLabel->
+  "During evaluation of \
+In[17]:=",ExpressionUUID->"f94bafa5-17fa-45e1-b1ad-f0c0ed7356d4"],
+
+Cell[BoxData["\<\"[5/7] Hippocampus \"\>"], "Print",
+ CellChangeTimes->{3.7731270887269297`*^9},
+ CellLabel->
+  "During evaluation of \
+In[20]:=",ExpressionUUID->"afabf0f7-501a-45cf-aa52-a4560c6ec35c"],
+
+Cell[BoxData["\<\"[6/7] Amygdala \"\>"], "Print",
+ CellChangeTimes->{3.773127207650552*^9},
+ CellLabel->
+  "During evaluation of \
+In[23]:=",ExpressionUUID->"932b8b07-29e5-4f44-a384-9c8898b537bc"],
+
+Cell[BoxData["\<\"[7/7] Accumbens \"\>"], "Print",
+ CellChangeTimes->{3.7731273255730343`*^9},
+ CellLabel->
+  "During evaluation of \
+In[26]:=",ExpressionUUID->"edc879fe-0166-44c6-a2b6-c13bf062951f"],
+
+Cell[BoxData["\<\"[Done] \"\>"], "Print",
+ CellChangeTimes->{3.773127444552849*^9},
+ CellLabel->
+  "During evaluation of \
+In[29]:=",ExpressionUUID->"ad165ecb-e77f-4bfc-9424-818018a7304c"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"TestPt", "=", "45"}], ";", 
+  RowBox[{"NotebookEvaluate", "[", "TestName", "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.76153335114144*^9, 3.761533351924831*^9}, 
+   3.771637758756516*^9, 3.7716378012516937`*^9, {3.771639743272442*^9, 
+   3.771639753980139*^9}, {3.772238347321487*^9, 3.772238348563602*^9}},
+ CellLabel->"In[36]:=",ExpressionUUID->"119df01d-57c5-4e56-b532-06e715fbbdfd"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"Subject: 45\"\>"], "Print",
+ CellChangeTimes->{3.7731274486078243`*^9},
+ CellLabel->
+  "During evaluation of \
+In[7]:=",ExpressionUUID->"49349939-ed4e-43c4-a790-7cbd2a844810"],
+
+Cell[BoxData["\<\"[1/7] Thalamus \"\>"], "Print",
+ CellChangeTimes->{3.773127448624255*^9},
+ CellLabel->
+  "During evaluation of \
+In[8]:=",ExpressionUUID->"66280456-e950-45f3-98db-ec346a48a13f"],
+
+Cell[BoxData["\<\"[2/7] Caudate \"\>"], "Print",
+ CellChangeTimes->{3.773127565701954*^9},
+ CellLabel->
+  "During evaluation of \
+In[11]:=",ExpressionUUID->"be31a5ae-65b4-474d-986d-e5708ca65c1f"],
+
+Cell[BoxData["\<\"[3/7] Putamen \"\>"], "Print",
+ CellChangeTimes->{3.773127683249776*^9},
+ CellLabel->
+  "During evaluation of \
+In[14]:=",ExpressionUUID->"528238f2-6184-436f-be27-03dff3b2e476"],
+
+Cell[BoxData["\<\"[4/7] Pallidum \"\>"], "Print",
+ CellChangeTimes->{3.773127802365848*^9},
+ CellLabel->
+  "During evaluation of \
+In[17]:=",ExpressionUUID->"2d6c0e8d-9767-40c1-a570-cc66c08df5a4"],
+
+Cell[BoxData["\<\"[5/7] Hippocampus \"\>"], "Print",
+ CellChangeTimes->{3.773127920140082*^9},
+ CellLabel->
+  "During evaluation of \
+In[20]:=",ExpressionUUID->"47ffe916-7d5e-4c5d-a225-86b8994c6be3"],
+
+Cell[BoxData["\<\"[6/7] Amygdala \"\>"], "Print",
+ CellChangeTimes->{3.773128036874456*^9},
+ CellLabel->
+  "During evaluation of \
+In[23]:=",ExpressionUUID->"2d7e352e-2c9a-42db-99c7-007c17c958fa"],
+
+Cell[BoxData["\<\"[7/7] Accumbens \"\>"], "Print",
+ CellChangeTimes->{3.773128154580687*^9},
+ CellLabel->
+  "During evaluation of \
+In[26]:=",ExpressionUUID->"ef63bcb7-4d30-40eb-b028-6ddb09f17fe9"],
+
+Cell[BoxData["\<\"[Done] \"\>"], "Print",
+ CellChangeTimes->{3.773128272218966*^9},
+ CellLabel->
+  "During evaluation of \
+In[29]:=",ExpressionUUID->"ce02507d-d32e-425c-87a9-7143b32b8a8c"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{590, 527},
+WindowMargins->{{Automatic, 183}, {-74, Automatic}},
+FrontEndVersion->"12.0 for Linux x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 270, 7, 55, "Input",ExpressionUUID->"623841c5-af16-4816-9351-3197182e9c16"],
+Cell[CellGroupData[{
+Cell[875, 33, 215, 4, 25, "Print",ExpressionUUID->"63fef950-38d8-41c5-aac9-7c62ae3b9441"],
+Cell[1093, 39, 226, 4, 25, "Print",ExpressionUUID->"5588b662-e62c-4ab3-88a9-3890c0171f2b"],
+Cell[1322, 45, 209, 4, 25, "Print",ExpressionUUID->"f89f0290-554d-4b7d-bd4d-2d6ea12ed5e2"]
+}, Open  ]]
+}, Open  ]],
+Cell[1558, 53, 242, 4, 31, "Input",ExpressionUUID->"a7a98336-e4e7-4cb3-95ef-3e552bd70ace"],
+Cell[1803, 59, 191, 4, 31, "Input",ExpressionUUID->"41bc45c1-902b-40e0-8f05-1669c89dabcd"],
+Cell[1997, 65, 259, 6, 31, "Input",ExpressionUUID->"83542c83-4b88-4d4c-aa18-1bde3a8f0fa0"],
+Cell[CellGroupData[{
+Cell[2281, 75, 425, 8, 31, "Input",ExpressionUUID->"2187b9a0-275e-4ae2-9a47-5a7b464ac79b"],
+Cell[CellGroupData[{
+Cell[2731, 87, 191, 4, 25, "Print",ExpressionUUID->"d441ccb3-9309-47f7-b83c-0cbdd783f00b"],
+Cell[2925, 93, 195, 4, 25, "Print",ExpressionUUID->"5e41d2cd-36e7-4c1b-a009-efcc46b1123f"],
+Cell[3123, 99, 195, 4, 25, "Print",ExpressionUUID->"df0222ea-daa1-48ca-a845-4c82930d974f"],
+Cell[3321, 105, 195, 4, 25, "Print",ExpressionUUID->"52c5ff7b-18e8-447b-ba90-5cb825ddeace"],
+Cell[3519, 111, 196, 4, 25, "Print",ExpressionUUID->"42d32da8-5c25-4f34-a9d1-e0e1fed5fc77"],
+Cell[3718, 117, 201, 4, 25, "Print",ExpressionUUID->"fa23cae9-c045-4431-8fd4-babdc3a00847"],
+Cell[3922, 123, 198, 4, 25, "Print",ExpressionUUID->"0af9d606-3422-45ec-9792-be26b9efa2fc"],
+Cell[4123, 129, 197, 4, 25, "Print",ExpressionUUID->"b4e16cc3-256a-405a-9de5-ce278c87fef7"],
+Cell[4323, 135, 187, 4, 25, "Print",ExpressionUUID->"be2c086f-647e-4d43-b58f-0de510d454cc"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4559, 145, 430, 7, 31, "Input",ExpressionUUID->"58ab8cb7-baca-4cf4-869c-ad51e32783dc"],
+Cell[CellGroupData[{
+Cell[5014, 156, 191, 4, 25, "Print",ExpressionUUID->"cdaa98f6-6ba8-4559-8b29-077c607207e8"],
+Cell[5208, 162, 197, 4, 25, "Print",ExpressionUUID->"39e0bf15-a455-4ac7-8ac7-43722f8b6a3b"],
+Cell[5408, 168, 195, 4, 25, "Print",ExpressionUUID->"581ba305-d1d4-433d-b65e-1af16725aa90"],
+Cell[5606, 174, 195, 4, 25, "Print",ExpressionUUID->"e4cf19e0-5865-4208-b38f-44b4c8419669"],
+Cell[5804, 180, 196, 4, 25, "Print",ExpressionUUID->"f30d6ccf-e641-4f6e-9233-254dc3fb837e"],
+Cell[6003, 186, 199, 4, 25, "Print",ExpressionUUID->"b22c6576-e9f0-4d35-b09d-4fde65c8dcb2"],
+Cell[6205, 192, 196, 4, 25, "Print",ExpressionUUID->"a9fe748e-e93c-4398-b025-66ba7d400b93"],
+Cell[6404, 198, 197, 4, 25, "Print",ExpressionUUID->"6cf0f677-23fa-48eb-b84f-b9dd1b42e352"],
+Cell[6604, 204, 188, 4, 25, "Print",ExpressionUUID->"bf29a30c-f564-46e5-9b23-e43317cd27e8"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6841, 214, 423, 7, 31, "Input",ExpressionUUID->"263b1c67-9172-4ca9-a719-a33ae3a9cd4b"],
+Cell[CellGroupData[{
+Cell[7289, 225, 191, 4, 25, "Print",ExpressionUUID->"37c105bf-ba4f-48b0-8ad3-d8eefea06294"],
+Cell[7483, 231, 195, 4, 25, "Print",ExpressionUUID->"621a81e0-99ab-4d6e-8159-2b3282a88941"],
+Cell[7681, 237, 195, 4, 25, "Print",ExpressionUUID->"14882d2d-04e5-48f2-88bc-cc85f4aa02f1"],
+Cell[7879, 243, 195, 4, 25, "Print",ExpressionUUID->"1add1492-d099-4982-a118-e410e016ae51"],
+Cell[8077, 249, 196, 4, 25, "Print",ExpressionUUID->"659c82ac-6fb8-4e47-a64a-9f6f0b149c2f"],
+Cell[8276, 255, 199, 4, 25, "Print",ExpressionUUID->"59ae3756-3b4e-490e-9b9c-e1ceeb80d919"],
+Cell[8478, 261, 196, 4, 25, "Print",ExpressionUUID->"5fa5df34-3fb4-4089-9c12-035ef0417c44"],
+Cell[8677, 267, 199, 4, 25, "Print",ExpressionUUID->"fc43c2fd-e354-457c-b5d7-9248db15a493"],
+Cell[8879, 273, 188, 4, 25, "Print",ExpressionUUID->"8a064448-61cc-4777-a55b-3c27616e65f6"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9116, 283, 404, 7, 31, "Input",ExpressionUUID->"198c9e8e-17da-4786-83f6-90cbe8f9eda0"],
+Cell[CellGroupData[{
+Cell[9545, 294, 191, 4, 25, "Print",ExpressionUUID->"252fca1f-f767-4c91-b2fc-8026f6c72d63"],
+Cell[9739, 300, 195, 4, 25, "Print",ExpressionUUID->"03b87a55-9f26-4753-bb07-3ee24df222e1"],
+Cell[9937, 306, 194, 4, 25, "Print",ExpressionUUID->"d9d94436-ee9c-448e-a020-61a824965149"],
+Cell[10134, 312, 195, 4, 25, "Print",ExpressionUUID->"e0fa9b43-7ea1-4de4-9229-d2d820c64cbe"],
+Cell[10332, 318, 196, 4, 25, "Print",ExpressionUUID->"bb4b4101-3ff4-4c37-a1e5-b0a059ace7b8"],
+Cell[10531, 324, 199, 4, 25, "Print",ExpressionUUID->"193bfdfa-247b-4bd7-8f25-c90d5166d901"],
+Cell[10733, 330, 196, 4, 25, "Print",ExpressionUUID->"a966d1af-51f6-4773-b9b6-9690050ad8ef"],
+Cell[10932, 336, 199, 4, 25, "Print",ExpressionUUID->"6f9d17de-564e-47f4-90b6-0a636bf530b2"],
+Cell[11134, 342, 188, 4, 25, "Print",ExpressionUUID->"ecde4e66-e3ef-4d85-b735-aad9e15e8d8f"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11371, 352, 447, 8, 31, "Input",ExpressionUUID->"e76ce33d-6827-450c-b7ed-d6130f29789a"],
+Cell[CellGroupData[{
+Cell[11843, 364, 191, 4, 25, "Print",ExpressionUUID->"97441fae-0f56-4d8d-b802-de9ea21baa88"],
+Cell[12037, 370, 197, 4, 25, "Print",ExpressionUUID->"d5c00b1e-c041-440b-bbd3-5c23cd85e177"],
+Cell[12237, 376, 197, 4, 25, "Print",ExpressionUUID->"9fbd5ba5-9d3e-47bd-816c-6afa7b0bc107"],
+Cell[12437, 382, 195, 4, 25, "Print",ExpressionUUID->"c9f6ef33-37a8-437d-baa8-ab3ffbd96ce2"],
+Cell[12635, 388, 196, 4, 25, "Print",ExpressionUUID->"a3f87681-d05d-48c0-b600-ed5ef65af946"],
+Cell[12834, 394, 199, 4, 25, "Print",ExpressionUUID->"a3a04f8f-e661-4151-97da-3aa1dab14970"],
+Cell[13036, 400, 196, 4, 25, "Print",ExpressionUUID->"361ca106-83bf-49ff-b4a0-e8192f1d8c19"],
+Cell[13235, 406, 199, 4, 25, "Print",ExpressionUUID->"fef7c9f4-ec94-4a02-8dca-b506b4c1d7be"],
+Cell[13437, 412, 188, 4, 25, "Print",ExpressionUUID->"2a80d7bc-b311-4c29-99ce-47d2c1afc5b9"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13674, 422, 422, 7, 31, "Input",ExpressionUUID->"39da21f2-376c-4f20-baab-4d4d4cd2a625"],
+Cell[CellGroupData[{
+Cell[14121, 433, 191, 4, 25, "Print",ExpressionUUID->"7727c42e-c470-4eee-a14a-aee0890dfb44"],
+Cell[14315, 439, 194, 4, 25, "Print",ExpressionUUID->"9d53b874-6d67-4c43-be37-d8e83a0c436b"],
+Cell[14512, 445, 195, 4, 25, "Print",ExpressionUUID->"a36749d3-7f71-4b02-8192-bfbc9fa8085b"],
+Cell[14710, 451, 195, 4, 25, "Print",ExpressionUUID->"67526f3f-1b7b-4199-abe9-f18577a610b2"],
+Cell[14908, 457, 198, 4, 25, "Print",ExpressionUUID->"c30ac194-29d2-4594-8043-da34691db2c6"],
+Cell[15109, 463, 199, 4, 25, "Print",ExpressionUUID->"9b540c0c-d1fc-4cc6-8d89-40fef3b7b293"],
+Cell[15311, 469, 196, 4, 25, "Print",ExpressionUUID->"67ce40fe-8911-43f6-957c-4d8c0941fe61"],
+Cell[15510, 475, 197, 4, 25, "Print",ExpressionUUID->"bfb5e585-48e3-44f1-bab4-efcd72cc9546"],
+Cell[15710, 481, 190, 4, 25, "Print",ExpressionUUID->"771930c7-a3e2-41fe-a2c0-61ee20766b4e"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15949, 491, 422, 7, 31, "Input",ExpressionUUID->"61a51077-80ce-4944-ab38-6e2db70b9db1"],
+Cell[CellGroupData[{
+Cell[16396, 502, 191, 4, 25, "Print",ExpressionUUID->"0d18f21d-9566-401f-b8b7-c3f80648a3dc"],
+Cell[16590, 508, 197, 4, 25, "Print",ExpressionUUID->"50e04b93-ea01-459f-bf0c-34dce669aea3"],
+Cell[16790, 514, 194, 4, 25, "Print",ExpressionUUID->"b29f1e82-ef2f-4ad9-a340-8aba43a2e5e3"],
+Cell[16987, 520, 197, 4, 25, "Print",ExpressionUUID->"c4b1f627-bf02-49fe-8da0-e49d6e7af297"],
+Cell[17187, 526, 196, 4, 25, "Print",ExpressionUUID->"f94bafa5-17fa-45e1-b1ad-f0c0ed7356d4"],
+Cell[17386, 532, 201, 4, 25, "Print",ExpressionUUID->"afabf0f7-501a-45cf-aa52-a4560c6ec35c"],
+Cell[17590, 538, 196, 4, 25, "Print",ExpressionUUID->"932b8b07-29e5-4f44-a384-9c8898b537bc"],
+Cell[17789, 544, 199, 4, 25, "Print",ExpressionUUID->"edc879fe-0166-44c6-a2b6-c13bf062951f"],
+Cell[17991, 550, 188, 4, 25, "Print",ExpressionUUID->"ad165ecb-e77f-4bfc-9424-818018a7304c"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18228, 560, 423, 7, 31, "Input",ExpressionUUID->"119df01d-57c5-4e56-b532-06e715fbbdfd"],
+Cell[CellGroupData[{
+Cell[18676, 571, 193, 4, 25, "Print",ExpressionUUID->"49349939-ed4e-43c4-a790-7cbd2a844810"],
+Cell[18872, 577, 195, 4, 25, "Print",ExpressionUUID->"66280456-e950-45f3-98db-ec346a48a13f"],
+Cell[19070, 583, 195, 4, 25, "Print",ExpressionUUID->"be31a5ae-65b4-474d-986d-e5708ca65c1f"],
+Cell[19268, 589, 195, 4, 25, "Print",ExpressionUUID->"528238f2-6184-436f-be27-03dff3b2e476"],
+Cell[19466, 595, 196, 4, 25, "Print",ExpressionUUID->"2d6c0e8d-9767-40c1-a570-cc66c08df5a4"],
+Cell[19665, 601, 199, 4, 25, "Print",ExpressionUUID->"47ffe916-7d5e-4c5d-a225-86b8994c6be3"],
+Cell[19867, 607, 196, 4, 25, "Print",ExpressionUUID->"2d7e352e-2c9a-42db-99c7-007c17c958fa"],
+Cell[20066, 613, 197, 4, 25, "Print",ExpressionUUID->"ef63bcb7-4d30-40eb-b028-6ddb09f17fe9"],
+Cell[20266, 619, 188, 4, 25, "Print",ExpressionUUID->"ce02507d-d32e-425c-87a9-7143b32b8a8c"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
