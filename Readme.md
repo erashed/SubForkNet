@@ -50,7 +50,7 @@ References
 
 * E. A. Rashed, J. Gomez-Tames, A. Hirata,
 "End-to-end semantic segmentation of personalized deep brain structures for non-invasive brain stimulation,"
-Neural Networks, 2020 (DOI: 10.1016/j.neunet.2020.02.006)
+Neural Networks 125, 233-244, 2020 (DOI: 10.1016/j.neunet.2020.02.006)
 
 * E. A. Rashed, J. Gomez-Tames, A. Hirata,
 "Development of accurate human head models for personalized electromagnetic dosimetry using deep learning,"
