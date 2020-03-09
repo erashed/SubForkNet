@@ -1,7 +1,7 @@
 # SubForkNet
 
 Copyrights (c) 2019, Essam Rashed 
-(essam.rashed@nitech.ac.jp), NITech, Nagoya, JP 
+(essam (dot) rashed (at-sign) nitech (dot) ac (dot) jp), NITech, Nagoya, JP 
 
 This code aims at mapping T1-w MRI image with segmented labels of different deep brain structures. The design of SubForkNet is based on unified encoders and individual decoders. This implementation is for SubForkNet (N=7, D=2) to segment brain deep regions. However, it can be easily extended to arbitrary any N and D.
  
